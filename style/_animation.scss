@@ -1,0 +1,27 @@
+@keyframes mouse {
+    from{
+        transform: translateY(0rem);
+    }to{
+        transform: translateY(2rem);
+    }
+}
+
+@keyframes animate
+{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate2
+{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}

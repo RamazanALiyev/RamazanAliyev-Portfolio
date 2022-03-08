@@ -1,0 +1,92 @@
+section#projects {
+  width: 100%;
+  min-height: 90vh;
+  position: relative;
+  top: 30vh;
+  padding: 10rem 0;
+  h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  p {
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    font-weight: 500;
+    color: $a999;
+  }
+  .projects {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+    .project {
+      position: relative;
+      border: 1px solid $color-black;
+      width: 24.8%;
+      height: 45vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .title {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        transition: 1s height;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(112, 112, 112);
+        background: linear-gradient(
+          90deg,
+          rgba(112, 112, 112, 1) 7%,
+          rgba(184, 144, 185, 1) 53%,
+          rgba(111, 187, 252, 1) 96%
+        );
+        a {
+          font-size: 2rem;
+          color: $color-black;
+          text-decoration: none;
+          opacity: 0;
+          padding: 2.2rem 10rem;
+          transition: 600ms opacity;
+          display: inline-block;
+        }
+      }
+      &:hover {
+        .title {
+          height: 10vh;
+          a {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 576px){
+  section#projects{
+    top: 0;
+    p{
+      padding: 0 2rem;
+    }
+    .projects{
+      .project{
+        width: 100%;
+      }
+    }
+  }
+}

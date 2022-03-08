@@ -1,0 +1,43 @@
+footer#backToTop {
+  width: 100%;
+  min-height: 20vh;
+  position: relative;
+  top: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .square {
+    width: 4rem;
+    height: 4rem;
+    transform: rotate(45deg);
+    background-color: $color-black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s all;
+    cursor: pointer;
+    position: relative;
+    z-index: 8;
+    &:hover{
+        background-color: $color-likeblue;
+    }
+    i {
+      color: $color-white;
+      transform: rotate(-45deg);
+      font-size: 2rem;
+    }
+  }
+  .line{
+      position: absolute;
+      width: 100%;
+      height: 1.5px;
+      background-color: $ddd;
+      z-index: 7;
+  }
+}
+
+@media (max-width: 576px){
+  footer#backToTop{
+    top: -2rem;
+  }
+}

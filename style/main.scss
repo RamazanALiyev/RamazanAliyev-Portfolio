@@ -1,0 +1,52 @@
+@import "./reset";
+@import "./variables";
+@import "./mixin";
+@import "./animation";
+@import "./header";
+@import "./section#header";
+@import "./section#about";
+@import "./education";
+@import "./experience";
+@import "./skills";
+@import "./projects";
+@import "./contact";
+@import "./socialPlatforma";
+@import "./bottomStyle";
+@import "./backtotop";
+@import './loading';
+
+html,
+body {
+  font-size: 10px;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+#toUp {
+  position: fixed;
+  right: 2rem;
+  bottom: 4rem;
+  width: 6em;
+  height: 6rem;
+  background-color: $color-black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 70;
+  opacity: 0;
+  transition: 1s opacity;
+  a {
+    font-size: 3rem;
+    text-decoration: none;
+    color: $color-white;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 576px){
+  #toUp{
+    display: none;
+  }
+}

@@ -1,0 +1,51 @@
+section#social-platforma {
+  width: 100%;
+  min-height: 25vh;
+  background-color: $color-likeblue;
+  position: relative;
+  top: 30vh;
+  .center {
+    width: 100%;
+    min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .social-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 6rem;
+      height: 6rem;
+      border: 1px solid $color-white;
+      transform: rotate(45deg);
+      margin: 1.2rem;
+      transition: 1s background-color;
+      &:hover {
+        cursor: pointer;
+        background-color: $color-white;
+        i{
+            color: $color-likeblue;
+        }
+      }
+      i {
+        transform: rotate(-45deg);
+        color: $color-white;
+        font-size: 2.4rem;
+        transition: 1s all;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 576px){
+  section#social-platforma{
+    top: -5rem;
+    .center{
+      flex-wrap: wrap;
+      .social-box{
+        height: 6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+section#education {
+  position: relative;
+  top: 10rem;
+  min-height: 90vh;
+  .center {
+    width: 80%;
+    margin: 0 auto;
+    min-height: 90vh;
+    display: flex;
+    .education-information {
+      width: 100%;
+      padding: 8rem 8rem 4rem 8rem;
+      h3.edu {
+        font-weight: 800;
+        font-size: 5rem;
+        margin-bottom: 5rem;
+        color: $color-likeblue3;
+        text-align: center;
+        letter-spacing: 2px;
+        position: relative;
+        text-shadow: 1rem 1rem 1px $lightgray;
+        transition: 1s text-shadow;
+        &:hover{
+        text-shadow: -1rem -1rem 1px $lightgray;
+        }
+      }
+      .educations{
+          display: flex;
+          border-bottom: 1px solid rgba($color: $color-black, $alpha: 0.1);
+          padding-bottom: 4rem;
+          margin-bottom: 2rem;
+          .edu-icon{
+              width: 6rem;
+              height: 6rem;
+              background-color: $color-likeblue3;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-right: 2rem;
+              .fa-solid{
+                  color: $color-white;
+                  font-size: 2.2rem;
+              }
+          }
+          .edu-infor{
+              h4{
+                font-weight: 700;
+                font-size: 1.6rem;
+                color: $color-likeblue3;
+              }
+              h3{
+                font-size: 2.4rem;
+                font-weight: 700;
+                color: $color-black;
+                margin: 1.5rem 0 2rem 0;
+                text-align: left;
+              }
+              h5{
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: $color-black;
+              }
+          }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px){
+  section#education{
+    top: -7rem;
+    padding-top: 13rem;
+    .center{
+      width: 90%;
+      .education-information{
+        padding: 0;
+        .educations{
+          &:nth-child(1){
+            .edu-icon{
+              width: 4rem;
+            }
+          }
+          .edu-icon{
+            width: 8rem;
+            height: 6rem;
+          }
+        }
+      }
+    }
+  }
+}

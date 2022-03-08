@@ -1,0 +1,117 @@
+main {
+  header#navbar {
+    width: 100%;
+    height: 7rem;
+    background-color: $lightgray;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    .center {
+      display: flex;
+      width: 80%;
+      height: 100%;
+      margin: 0 auto;
+      .title {
+        width: 20rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        cursor: pointer;
+        span {
+          color: $color-likecrimson;
+        }
+      }
+      .nav-menu {
+        height: 100%;
+        width: calc(100% - 20rem);
+        ul {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          li {
+            margin: 0 1.5rem;
+            font-size: 1.6rem;
+            a {
+              text-decoration: none;
+              color: $color-black;
+              font-weight: 400;
+              padding: 1rem;
+              transition: 1s all;
+              border-bottom: 1px solid transparent;
+            }
+            &:hover {
+              a {
+                border-bottom: 1px solid $color-likeblue;
+                color: $color-likeblue;
+              }
+            }
+          }
+        }
+      }
+      .hamburger {
+        width: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        display: none;
+        i.ham {
+          font-size: 3rem;
+        }
+        i.cross{
+          font-size: 4rem;
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  main {
+    header#navbar {
+      .center {
+        width: calc(100% - 3rem);
+        .nav-menu {
+          ul {
+            border-left: 1px solid transparent;
+            width: 0;
+            height: 91.2vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+            position: absolute;
+            top: 7rem;
+            right: 0;
+            overflow: hidden;
+            background-color: rgb(245, 245, 245);
+            li{
+              line-height: 5rem;
+              margin: 0;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              border-bottom: 1px solid rgb(185, 185, 185);
+              background-color: rgb(185, 185, 185);
+              a{
+                padding: 1rem 11rem;
+                text-align: center;
+              }
+            }
+          }
+        }
+        .pageLang {
+          display: none;
+        }
+        .hamburger{
+          display: flex;
+        }
+      }
+    }
+  }
+}

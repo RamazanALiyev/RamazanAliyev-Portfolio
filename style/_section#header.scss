@@ -1,0 +1,133 @@
+section#header {
+  position: relative;
+  min-height: 90vh;
+  #slider {
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 90vh;
+      object-fit: cover;
+    }
+  }
+  #texts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .someText {
+      color: $color-white;
+      font-size: 4rem;
+      text-align: center;
+    }
+    h3 {
+      @extend .someText;
+    }
+    h1 {
+      @extend .someText;
+      span {
+        color: crimson;
+      }
+      margin: 2rem 0;
+    }
+    p {
+      @extend .someText;
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0;
+      a.me {
+        border: 1px solid transparent;
+        text-decoration: none;
+        color: $color-white;
+        margin: 0 1rem;
+        width: 12rem;
+        padding: 1.5rem;
+        text-align: center;
+        border-radius: 1rem;
+        transition: 300ms background-color;
+        font-size: 1.4rem;
+        font-style: italic;
+      }
+      a.learn {
+        background-color: $color-likecrimson;
+        border-color: $color-likecrimson;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+      a.hire {
+        border-color: green;
+        color: $color-white;
+        &:hover {
+          background-color: green;
+          color: $color-white;
+          border-color: $color-white;
+        }
+      }
+    }
+    .donwloadCV {
+      margin-top: 2rem;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      a {
+        padding: 2rem 0;
+        width: 18rem;
+        border: 1px solid transparent;
+        color: $color-white;
+        background: linear-gradient(
+          to right,
+          #aa726f,
+          #ec5b53,
+          #aa726f,
+          #ec5b53,
+          #aa726f
+        );
+        background-repeat: no-repeat;
+        text-decoration: none;
+        font-size: 1.4rem;
+        border-radius: 1rem;
+      }
+    }
+    .mouse {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: -8rem;
+      animation: mouse 1s infinite alternate ease-in-out;
+      a {
+        color: $color-white;
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  section#header{
+    #texts{
+      width: 100%;
+      h3{
+        font-size: 3rem;
+        line-height: 4rem;
+      }
+      h1{
+        line-height: 4rem;
+        font-size: 3rem;
+        span{
+          font-style: oblique;
+        }
+      }
+      p{
+        line-height: 4rem;
+        font-size: 3rem;
+        font-style: italic;
+      }
+    }
+  }
+}
